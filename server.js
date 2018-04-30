@@ -27,6 +27,10 @@ app.post('/counter', function(req, res) {
     req.session.counter++
     res.redirect('/');
 })
+app.post('/reset', function(req, res) {
+    req.session.counter = 0
+    res.redirect('/');
+})
 
 app.listen(8000, function() {
     console.log("Power Overwhelming...");
